@@ -1,0 +1,15 @@
+h1 {
+    color: maroon;
+}
+
+
+.post {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.user {
+    font-weight: bold;
+    color: blue;
+}

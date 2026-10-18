@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new post</title>
+</head>
+<body>
+    <h1>Create a new post</h1>
+    <% if (error) { %>
+        <p role="alert"><%= error %></p>
+    <% } %>
+    <form action="/posts" method="POST">
+        <label for="username">Username</label><br>
+        <input id="username" type="text" name="username" placeholder="Enter your username" value="<%= values.username || '' %>" required><br><br>
+        <label for="password">Password</label><br>
+        <input id="password" type="password" name="password" placeholder="Enter your password" required><br><br>
+        <label for="content">Post</label><br>
+        <textarea id="content" name="content" cols="30" rows="10" placeholder="Enter your post" required><%= values.content || '' %></textarea><br>
+        <button type="submit">Create Post</button>
+    </form>
+    <p><a href="/posts">Cancel</a></p>
+</body>
+</html>
